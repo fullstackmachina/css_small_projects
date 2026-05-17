@@ -12,83 +12,88 @@ body {
 }
 
 .container {
-    width: 400px;
-    height: 400px;
-    margin: 100px auto;
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
 }
 
-.c1 {background: salmon;}
-.c2 {background: lightblue;}
-.c3 {background: lightgreen;}
-.c4 {background: khaki;}
-.c5 {background: sandybrown;}
-.c6 {background: slateblue;}
-
+.c1 {
+  background: salmon;
+}
+.c2 {
+  background: lightblue;
+}
+.c3 {
+  background: lightgreen;
+}
+.c4 {
+  background: khaki;
+}
+.c5 {
+  background: sandybrown;
+}
+.c6 {
+  background: slateblue;
+}
 
 /*
 Find 6 ways to have the "Center me" text centered on X and Y.
 Horizontally and vertically.
 */
 
-
-/* 1 */
+/* 1  Flexbox */
 
 .c1 {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.c1 h1 {
 
-}
-
-
-/* 2 */
+/* 2 GRID */
 
 .c2 {
-
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
-.c2 h1 {
 
-}
-
-
-/* 3 */
+/* 3 POSITION */
 
 .c3 {
-
+  position: relative;
 }
-.c3 h1{
-
+.c3 h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-/* 4 */
+/* 4 FLEXBOX + MARGIN AUTO */
 
 .c4 {
-
+  display: flex;
 }
 .c4 h1 {
-
+  margin: auto;
 }
 
-
-/* 5 */
+/* 5 TEXT-ALIGN + LINE-HEIGHT*/
 
 .c5 {
-
+  text-align: center;
 }
 .c5 h1 {
-
+  line-height: 400px;
 }
 
-
-/* 6 */
+/* 6 OLD  */
 
 .c6 {
-
+  display: table;
+  text-align: center;
 }
 .c6 h1 {
-
-} 
-
-
-
+  display: table-cell;
+  vertical-align: middle;
+}
